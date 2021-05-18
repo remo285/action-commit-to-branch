@@ -28,10 +28,8 @@ else
    git checkout -b "${INPUT_BRANCH}"
 fi
 
-git stash pop
-git add .
-git cherry-pick --strategy=recursive -X theirs "${INPUT_BRANCH}"
-git status
-git add .
-git commit -m "${INPUT_COMMIT_MESSAGE}"
-git push --set-upstream origin "${INPUT_BRANCH}"
+git_setup
+git fetch origin master
+git fetch origin "$INPUT_BRANCH"
+git checkout master
+git push origin master:"${INPUT_BRANCH}" -f
