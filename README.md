@@ -17,7 +17,7 @@ Custom commit message. **default** "Automated commit from action""
 ## Example usage
 ```
 - name: Push to built branch
-  uses: Automattic/action-commit-to-branch@master
+  uses: remo285/action-commit-to-branch@master
   with:
     branch: 'master-built'
     commit_message: 'Build master'
