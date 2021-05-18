@@ -24,3 +24,6 @@ Custom commit message. **default** "Automated commit from action""
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Required
 ```
+## Notice
+This will only work with repos whose origin master branch is called master
+
