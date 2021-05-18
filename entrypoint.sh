@@ -30,5 +30,8 @@ fi
 
 git stash pop
 git add .
+git cherry-pick --strategy=recursive -X theirs "${INPUT_BRANCH}"
+git status
+git add .
 git commit -m "${INPUT_COMMIT_MESSAGE}"
 git push --set-upstream origin "${INPUT_BRANCH}"
