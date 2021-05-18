@@ -31,5 +31,5 @@ fi
 git_setup
 git fetch origin main
 git fetch origin "$INPUT_BRANCH"
-git checkout master
+git checkout main
 git push origin master:"${INPUT_BRANCH}" -f
